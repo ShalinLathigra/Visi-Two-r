@@ -10,13 +10,18 @@ config_version=5
 
 [application]
 
-config/name="Godot 4 Git-template"
+config/name="DropC#"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
-[dotnet]
+[autoload]
 
-project/assembly_name="Godot 4 Git-template"
+PathFinder="*res://Autoloads/PathFinder.tscn"
+
+[display]
+
+window/size/viewport_width=1024
+window/size/viewport_height=1024
 
 [rendering]
 
