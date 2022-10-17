@@ -2,13 +2,13 @@
 
 importer="font_data_dynamic"
 type="FontFile"
-uid="uid://bpqlo64ka08j1"
-path="res://.godot/imported/zig_____.ttf-6736ff4445b2c9d00800e3e227434bf6.fontdata"
+uid="uid://k66g8etlhcja"
+path="res://.godot/imported/novem___.ttf-a71e8184ea539d70cf5fe8aeb9ac820b.fontdata"
 
 [deps]
 
-source_file="res://Art/Themes/zig/zig_____.ttf"
-dest_files=["res://.godot/imported/zig_____.ttf-6736ff4445b2c9d00800e3e227434bf6.fontdata"]
+source_file="res://CommonArt/Themes/november/novem___.ttf"
+dest_files=["res://.godot/imported/novem___.ttf-a71e8184ea539d70cf5fe8aeb9ac820b.fontdata"]
 
 [params]
 

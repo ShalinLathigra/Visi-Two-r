@@ -1,0 +1,9 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://c2cu1yn22esc4"]
+
+[ext_resource type="FontFile" uid="uid://k66g8etlhcja" path="res://CommonArt/Themes/november/novem___.ttf" id="1_c6rlt"]
+
+[resource]
+default_font = ExtResource("1_c6rlt")
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/font_sizes/font_size = 16
+Label/fonts/font = ExtResource("1_c6rlt")

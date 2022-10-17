@@ -9,7 +9,8 @@ var grid : AStarGrid2D
 func _ready() -> void:
 	set_map(map)
 
-func set_map(map: TileMap) -> void:
+func set_map(m: TileMap) -> void:
+	map = m
 	grid = AStarGrid2D.new();
 	grid.default_heuristic = AStarGrid2D.HEURISTIC_EUCLIDEAN
 	grid.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_ONLY_IF_NO_OBSTACLES
@@ -22,7 +23,7 @@ func set_map(map: TileMap) -> void:
 		var tile = map.get_cell_tile_data(0, cell)
 		grid.set_point_solid(cell, not tile.get_custom_data("Walkable"))
 
-func find_point_path(start: Vector2i, end: Vector2i) -> PackedVector2Array:
+func find_point_path(start: Vector2i, end: Vector2i) -> Array[Vector2i]:
 	return grid.get_id_path(start, end)
 
 func is_point_solid(point: Vector2i) -> bool:

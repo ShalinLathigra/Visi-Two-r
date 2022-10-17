@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://4h2a7ta8k6nr"]
+
+[ext_resource type="Script" path="res://Game/Debug/PlayerActionDebug.gd" id="1_r03av"]
+[ext_resource type="Theme" uid="uid://c2cu1yn22esc4" path="res://CommonArt/Themes/BaseUITheme.tres" id="2_2dkpa"]
+
+[node name="PlayerActionDebug" type="CanvasLayer"]
+follow_viewport_enabled = true
+script = ExtResource("1_r03av")
+_num_labels = 8.0
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="LabelContainer" type="VBoxContainer" parent="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_vertical = 3
+theme = ExtResource("2_2dkpa")
+alignment = 2

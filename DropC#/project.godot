@@ -8,6 +8,52 @@
 
 config_version=5
 
+_global_script_classes=[{
+"base": "RefCounted",
+"class": &"Action",
+"language": &"GDScript",
+"path": "res://Agent/Actions/Action.gd"
+}, {
+"base": "Sprite2D",
+"class": &"Agent",
+"language": &"GDScript",
+"path": "res://Agent/Agent.gd"
+}, {
+"base": "Node2D",
+"class": &"Encounter",
+"language": &"GDScript",
+"path": "res://Encounter/Encounter.gd"
+}, {
+"base": "Action",
+"class": &"GroupAction",
+"language": &"GDScript",
+"path": "res://Agent/Actions/GroupAction.gd"
+}, {
+"base": "Node2D",
+"class": &"PlayerController",
+"language": &"GDScript",
+"path": "res://Game/Player/PlayerController.gd"
+}, {
+"base": "SelfAction",
+"class": &"SMoveInDirAction",
+"language": &"GDScript",
+"path": "res://Agent/Actions/SMoveInDirAction.gd"
+}, {
+"base": "Action",
+"class": &"SelfAction",
+"language": &"GDScript",
+"path": "res://Agent/Actions/SingleAction.gd"
+}]
+_global_script_class_icons={
+"Action": "",
+"Agent": "",
+"Encounter": "",
+"GroupAction": "",
+"PlayerController": "",
+"SMoveInDirAction": "",
+"SelfAction": ""
+}
+
 [application]
 
 config/name="DropC#"
@@ -22,6 +68,29 @@ PathFinder="*res://Autoloads/PathFinder.tscn"
 
 window/size/viewport_width=1024
 window/size/viewport_height=1024
+
+[input]
+
+move_up={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":87,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
+}
+move_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":65,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
+}
+move_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":68,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
+}
+move_down={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":83,"physical_keycode":0,"unicode":0,"echo":false,"script":null)
+]
+}
 
 [rendering]
 

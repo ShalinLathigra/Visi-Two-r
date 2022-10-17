@@ -1,0 +1,38 @@
+Alrighty, so how's the whole relationship thing looking right now?
+
+
+A Level consists of:
+
+PathFinder (Autoload)
+Encounter
+- 1 Player [Inherits from Agent]
+- 1 Player Controller [Custom thing, interacts with the player object to provide inputs]
+- n RangedEnemy [Instances of StateDrivenAgent, Inherit from Agent]
+- n MeleeEnemy [Instances of StateDrivenAgent, Inherit from Agent]
+- n Breakable Objects [Inherit from Agent]
+- n PlayerTraps [Inherits from StateDrivenAgent]
+- 1 TileMap	
+
+Difference between the player and the enemies is that the enemies have more state information that
+they want to track / use.
+
+Pathfinding will begin with the AStarGrid2D. 
+Derived from the provided TileMap need to keep on top of units setting tiles used
+When a Move action is instantiated, it checks if it's available. If yes, then set the new location
+to be dirty or something. Maybe this is when the other enemy is informed of it's impending doom.
+
+Agent
+- 1 Sprite
+- 1 GridPosition
+- 1 HealthObject (This determines whether it can be shoved, picked up, etc.)
+
+StateDrivenAgent : Agent
+- 1 StateMachine (Invokes the current state, entry, and exit logic. Provides states with ref to the owner.)
+	- This means that the two are possible to separate and test individually
+
+MeleeEnemy :: StateDrivenAgent
+(Not sure if these are States, code only classes, or what exactly yet. Will think more on it.)
+-- Patrol
+-- Idle
+-- MeleeAttack
+-- MeleeChase

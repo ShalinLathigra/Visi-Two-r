@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5kh6pugxb1en"
-path="res://.godot/imported/person.svg-dfd825ba9cf6a527bb8dcdcc5d557040.ctex"
+uid="uid://bojk773bl71lp"
+path="res://.godot/imported/TestTiles.png-1baa09fd1f09a80a2e3ff83cc5735753.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/person.svg"
-dest_files=["res://.godot/imported/person.svg-dfd825ba9cf6a527bb8dcdcc5d557040.ctex"]
+source_file="res://CommonArt/TestTiles.png"
+dest_files=["res://.godot/imported/TestTiles.png-1baa09fd1f09a80a2e3ff83cc5735753.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

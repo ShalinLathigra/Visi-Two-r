@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw0b226xhctk4"]
+
+[ext_resource type="PackedScene" uid="uid://bfsnu05rdk7d1" path="res://Encounter/Encounter.tscn" id="1_5akph"]
+[ext_resource type="Script" path="res://Game/Game.gd" id="1_gwq4c"]
+[ext_resource type="PackedScene" path="res://Agent/player.tscn" id="3_ki4lq"]
+[ext_resource type="Script" path="res://Game/Player/PlayerController.gd" id="4_ml3gc"]
+[ext_resource type="PackedScene" uid="uid://4h2a7ta8k6nr" path="res://Game/Debug/player_action_debug.tscn" id="5_vfpfa"]
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_gwq4c")
+_player_controller_path = NodePath("PlayerController")
+_encounter_path = NodePath("Encounter")
+
+[node name="Encounter" parent="." instance=ExtResource("1_5akph")]
+start_on_ready = false
+
+[node name="PlayerController" type="Node2D" parent="."]
+script = ExtResource("4_ml3gc")
+_player_avatar_path = NodePath("PlayerAvatar")
+_encounter_path = NodePath("../Encounter")
+
+[node name="PlayerAvatar" parent="PlayerController" instance=ExtResource("3_ki4lq")]
+
+[node name="PlayerActionDebug" parent="." instance=ExtResource("5_vfpfa")]
+
+[connection signal="action_started" from="PlayerController/PlayerAvatar" to="PlayerActionDebug" method="push_action"]
