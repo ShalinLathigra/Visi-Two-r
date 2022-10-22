@@ -1,10 +1,15 @@
 extends Node2D
 
+signal map_swapped
 
 var grid : AStarGrid2D
 
 @export var map : TileMap
 
+enum LAYER {
+	BASE,
+	HIGHLIGHT,
+}
 
 func _ready() -> void:
 	set_map(map)
@@ -22,6 +27,8 @@ func set_map(m: TileMap) -> void:
 	for cell in map.get_used_cells(0):
 		var tile = map.get_cell_tile_data(0, cell)
 		grid.set_point_solid(cell, not tile.get_custom_data("Walkable"))
+
+	emit_signal("map_swapped", map)
 
 func find_point_path(start: Vector2i, end: Vector2i) -> Array[Vector2i]:
 	return grid.get_id_path(start, end)

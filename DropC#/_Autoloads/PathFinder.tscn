@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://Autoloads/PathFinder.gd" id="1_r1rd4"]
-[ext_resource type="Texture2D" uid="uid://bojk773bl71lp" path="res://CommonArt/TestTiles.png" id="2_te6al"]
+[ext_resource type="Script" path="res://_Autoloads/PathFinder.gd" id="1_r1rd4"]
+[ext_resource type="Texture2D" uid="uid://bojk773bl71lp" path="res://_CommonArt/TestTiles.png" id="2_te6al"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1kfs2"]
 texture = ExtResource("2_te6al")

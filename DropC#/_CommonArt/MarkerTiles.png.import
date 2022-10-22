@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5kh6pugxb1en"
-path="res://.godot/imported/person.svg-00e5d783401bc1356b903e17fa11d1ca.ctex"
+uid="uid://cqmxc74f5e13t"
+path="res://.godot/imported/MarkerTiles.png-0bc3419dd9ee0ac93359a6a629801eb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CommonArt/person.svg"
-dest_files=["res://.godot/imported/person.svg-00e5d783401bc1356b903e17fa11d1ca.ctex"]
+source_file="res://_CommonArt/MarkerTiles.png"
+dest_files=["res://.godot/imported/MarkerTiles.png-0bc3419dd9ee0ac93359a6a629801eb6.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=0.125
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

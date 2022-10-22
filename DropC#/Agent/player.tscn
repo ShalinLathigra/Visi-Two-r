@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Texture2D" uid="uid://b5kh6pugxb1en" path="res://CommonArt/person.svg" id="1_vx6vf"]
+[ext_resource type="Texture2D" uid="uid://b5kh6pugxb1en" path="res://_CommonArt/person.svg" id="1_vx6vf"]
 [ext_resource type="Script" path="res://Agent/Agent.gd" id="2_we4l6"]
 
 [node name="Player" type="Sprite2D"]

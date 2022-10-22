@@ -12,7 +12,7 @@ _global_script_classes=[{
 "base": "RefCounted",
 "class": &"Action",
 "language": &"GDScript",
-"path": "res://Agent/Actions/Action.gd"
+"path": "res://Game/Actions/Action.gd"
 }, {
 "base": "Sprite2D",
 "class": &"Agent",
@@ -25,49 +25,43 @@ _global_script_classes=[{
 "path": "res://Encounter/Encounter.gd"
 }, {
 "base": "Action",
-"class": &"GroupAction",
+"class": &"MoveAction",
 "language": &"GDScript",
-"path": "res://Agent/Actions/GroupAction.gd"
+"path": "res://Game/Actions/MoveAction.gd"
 }, {
 "base": "Node2D",
 "class": &"PlayerController",
 "language": &"GDScript",
 "path": "res://Game/Player/PlayerController.gd"
-}, {
-"base": "SelfAction",
-"class": &"SMoveInDirAction",
-"language": &"GDScript",
-"path": "res://Agent/Actions/SMoveInDirAction.gd"
-}, {
-"base": "Action",
-"class": &"SelfAction",
-"language": &"GDScript",
-"path": "res://Agent/Actions/SingleAction.gd"
 }]
 _global_script_class_icons={
 "Action": "",
 "Agent": "",
 "Encounter": "",
-"GroupAction": "",
-"PlayerController": "",
-"SMoveInDirAction": "",
-"SelfAction": ""
+"MoveAction": "",
+"PlayerController": ""
 }
 
 [application]
 
 config/name="DropC#"
+run/main_scene="res://Game/game.tscn"
 config/features=PackedStringArray("4.0", "Mobile")
 config/icon="res://icon.svg"
 
 [autoload]
 
-PathFinder="*res://Autoloads/PathFinder.tscn"
+PathFinder="*res://_Autoloads/PathFinder.tscn"
+ActionDebug="*res://_Autoloads/ActionDebug.tscn"
 
 [display]
 
 window/size/viewport_width=1024
 window/size/viewport_height=1024
+
+[dotnet]
+
+project/assembly_name="DropC#"
 
 [input]
 
@@ -95,3 +89,4 @@ move_down={
 [rendering]
 
 renderer/rendering_method="mobile"
+textures/canvas_textures/default_texture_filter=0

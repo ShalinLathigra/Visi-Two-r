@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://imdqex2wal6n"
-path="res://.godot/imported/marker.svg-8e67454fcd7a06e3e2238af338137c1a.ctex"
+uid="uid://b5kh6pugxb1en"
+path="res://.godot/imported/person.svg-2fb8aca5a85e6b44d77d91cf1e16d5bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://CommonArt/marker.svg"
-dest_files=["res://.godot/imported/marker.svg-8e67454fcd7a06e3e2238af338137c1a.ctex"]
+source_file="res://_CommonArt/person.svg"
+dest_files=["res://.godot/imported/person.svg-2fb8aca5a85e6b44d77d91cf1e16d5bb.ctex"]
 
 [params]
 
@@ -32,6 +32,6 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
+svg/scale=0.125
 editor/scale_with_editor_scale=false
 editor/convert_colors_with_editor_theme=false
