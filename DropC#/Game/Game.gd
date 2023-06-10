@@ -24,10 +24,13 @@ func _ready():
 	_player.start_turn()
 	_player.turn_finished.connect(on_player_turn_finished)
 
+	var action_test: Array[Action] = []
+
 # handles the update loop
 func _process(_delta: float) -> void:
 	if turn == TURN.PLAYER:
 		_player_agent.tick()
+		await _player_agent.action_finished
 
 func on_player_turn_finished() -> void:
 	await _player_agent.action_queue_emptied

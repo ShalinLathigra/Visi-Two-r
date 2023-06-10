@@ -1,22 +1,12 @@
 class_name Agent
-extends Sprite2D
+extends GridObject
 
 signal action_declared (action: Action)
 signal action_started (action: Action)
 signal action_finished (action: Action)
 signal action_queue_emptied
 
-var grid_position: Vector2i
-var pending_grid_position: Vector2i
 const _duration: float = 0.3
-
-func _ready():
-	grid_position = PathFinder.local_to_point(position)
-
-func set_grid_position(g_pos: Vector2i) -> void:
-	grid_position = g_pos
-	pending_grid_position = grid_position
-	position = PathFinder.point_to_local(grid_position)
 
 ###
 # Action Queue Handling
@@ -24,9 +14,10 @@ func set_grid_position(g_pos: Vector2i) -> void:
 var _action_queue: Array[Action]
 var _working: bool
 
-func add_to_queue(action: Action) -> void:
-	emit_signal("action_declared", action)
-	_action_queue.push_back(action)
+func add_to_queue(action_set: Array[Action]) -> void:
+	for action in action_set:
+		emit_signal("action_declared", action)
+		_action_queue.push_back(action)
 
 func tick():
 	if not _working and _action_queue.size() > 0:

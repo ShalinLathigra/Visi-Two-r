@@ -15,6 +15,7 @@ offset_right = 192.0
 offset_bottom = 1024.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer"]
+layout_mode = 2
 offset_right = 192.0
 offset_bottom = 352.0
 theme = ExtResource("2_6bhqf")

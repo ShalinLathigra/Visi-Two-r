@@ -1,8 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://kcmbfrypyr8h"]
+[gd_scene load_steps=3 format=3 uid="uid://575n02auf6c7"]
 
 [ext_resource type="Texture2D" uid="uid://b5kh6pugxb1en" path="res://_CommonArt/person.svg" id="1_vx6vf"]
 [ext_resource type="Script" path="res://Agent/Agent.gd" id="2_we4l6"]
 
-[node name="Player" type="Sprite2D"]
+[node name="Agent" type="Sprite2D"]
 texture = ExtResource("1_vx6vf")
 script = ExtResource("2_we4l6")

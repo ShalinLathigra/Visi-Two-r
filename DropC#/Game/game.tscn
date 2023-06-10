@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://dnknw5ai8530t"]
+[gd_scene load_steps=9 format=3 uid="uid://cp4gnoab1v0pu"]
 
 [ext_resource type="PackedScene" uid="uid://dl5i0a84nai53" path="res://Encounter/Encounter.tscn" id="1_5akph"]
 [ext_resource type="Script" path="res://Game/Game.gd" id="1_gwq4c"]
-[ext_resource type="PackedScene" path="res://Agent/player.tscn" id="3_ki4lq"]
+[ext_resource type="PackedScene" uid="uid://kcmbfrypyr8h" path="res://Agent/player.tscn" id="3_ki4lq"]
 [ext_resource type="Script" path="res://Game/Player/PlayerController.gd" id="4_ml3gc"]
+[ext_resource type="Texture2D" uid="uid://imdqex2wal6n" path="res://_CommonArt/marker.svg" id="5_pupgf"]
 [ext_resource type="PackedScene" uid="uid://c8hdhoejutyj4" path="res://_Autoloads/ActionDebug.tscn" id="5_vfpfa"]
+[ext_resource type="Script" path="res://Game/MouseTracker.gd" id="5_wfk8i"]
+[ext_resource type="Script" path="res://Game/MoveInput.gd" id="7_hbl1m"]
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_gwq4c")
@@ -16,12 +19,18 @@ start_on_ready = false
 
 [node name="PlayerController" type="Node2D" parent="."]
 script = ExtResource("4_ml3gc")
-_player_avatar_path = NodePath("PlayerAvatar")
 _encounter_path = NodePath("../Encounter")
 max_used_actions = 3.0
 
+[node name="MouseMarker" type="Sprite2D" parent="PlayerController"]
+texture = ExtResource("5_pupgf")
+script = ExtResource("5_wfk8i")
+
 [node name="PlayerAvatar" parent="PlayerController" instance=ExtResource("3_ki4lq")]
 use_parent_material = true
+
+[node name="MoveInput" type="Node" parent="PlayerController"]
+script = ExtResource("7_hbl1m")
 
 [node name="ActionDebug" parent="." instance=ExtResource("5_vfpfa")]
 
